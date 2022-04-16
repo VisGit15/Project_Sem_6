@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+    	<input type="text" name="Para 1" placeholder="Para 1" required="required" />
+        <input type="text" name="Para 2" placeholder="Para 2" required="required" />
+		<input type="text" name="Para 3" placeholder="Para 3" required="required" />
+		<input type="text" name="Para 4" placeholder="Para 4" required="required" />
+    <input type="text" name="Para 5" placeholder="Para 5" required="required" />
+    <br>
+    <br>
+      <input type="text" name="Para 6" placeholder="Para 6" required="required" />
+  <input type="text" name="Para 7" placeholder="Para 7" required="required" />
+  <input type="text" name="Para 8" placeholder="Para 8" required="required" />
+  <input type="text" name="Para 9" placeholder="Para 9" required="required" />
+    <input type="text" name="Para 10" placeholder="Para 10" required="required" />
+    <br>
+    <br>
+<input type="text" name="Para 11" placeholder="Para 11" required="required" />
+<input type="text" name="Para 12" placeholder="Para 12" required="required" />
+<input type="text" name="Para 13" placeholder="Para 13" required="required" />
+  <input type="text" name="Para 14" placeholder="Para 14" required="required" />
+<input type="text" name="Para 15" placeholder="Para 15" required="required" />
+<br>
+<br>
+<input type="text" name="Para 16" placeholder="Para 16" required="required" />
+<!-- <input type="text" name="Para 17" placeholder="Para 17" required="required" />
+  <input type="text" name="Para 18" placeholder="Para 18" required="required" />
+<input type="text" name="Para 19" placeholder="Para 19" required="required" />
+<input type="text" name="Para 20" placeholder="Para 20" required="required" /> -->
+<br>
+<br>
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
